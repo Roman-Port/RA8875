@@ -3,6 +3,10 @@
 #include <stdint.h>
 #include "driver/spi_master.h"
 
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
 typedef struct {
 
     spi_device_handle_t spi_device;
@@ -120,7 +124,7 @@ void RA8875_set_writing_layer(RA8875_context_t* ctx, uint8_t layer);
     1100b S
     1101b S+~D
     1110b S+D
-    1111b 1 ( Whiteness ) 
+    1111b 1 ( Whiteness )
 
 */
 
@@ -140,3 +144,7 @@ void RA8875_bte_move(RA8875_context_t* ctx, uint16_t srcX, uint16_t srcY, uint8_
 /// Fills a rectangle on the display.
 /// </summary>
 void RA8875_bte_fill(RA8875_context_t* ctx, uint16_t x, uint16_t y, uint8_t layer, uint16_t width, uint16_t height, uint8_t color);
+
+#if defined(__cplusplus)
+}
+#endif
