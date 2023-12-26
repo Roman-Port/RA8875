@@ -148,3 +148,4 @@ void RA8875_bte_fill(RA8875_context_t* ctx, uint16_t x, uint16_t y, uint8_t laye
 #if defined(__cplusplus)
 }
 #endif
+
